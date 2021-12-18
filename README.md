@@ -2,7 +2,7 @@
 ### 目录结构
 ```
 - Spoons
-    --CountDown.spoon   (计数，倒数器，未完成)
+    -- CountDown.spoon   (计数，倒数器，未完成)
 - modules
     -- auto_input_method.lua    （切换应用是自动切换输入法）
     -- clipboard.lua            （剪切板，记录复制文本历史）
