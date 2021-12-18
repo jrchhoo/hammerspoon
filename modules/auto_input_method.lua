@@ -7,7 +7,7 @@ end
 
 -- app to expected ime config
 local app2Ime = {
-    {'/System/Library/CoreServices/Finder.app', 'Chinese'},
+    {'/System/Library/CoreServices/Finder.app', 'English'},
     {'/System/Library/CoreServices/Spotlight.app', 'English'},
     {'/System/Applications/Utilities/Terminal.app', 'English'},
     {'/System/Applications/Notes.app', 'Chinese'},
@@ -15,7 +15,7 @@ local app2Ime = {
     {'/Applications/Visual Studio Code.app', 'English'},
     {'/Applications/intelliJ IDEA.app', 'English'},
     {'/Applications/DataGrip.app', 'English'},
-    {'/Applications/Safari.app', 'Chinese'},
+    {'/Applications/Safari.app', 'English'},
     {'/Applications/Google Chrome.app', 'English'},
     {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/QQ.app', 'Chinese'},
