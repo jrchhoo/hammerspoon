@@ -14,6 +14,7 @@ local app2Ime = {
     {'/System/Applications/System Preferences.app', 'Chinese'},
     {'/Applications/Visual Studio Code.app', 'English'},
     {'/Applications/intelliJ IDEA.app', 'English'},
+    {'/Applications/Lepton.app', 'English'},
     {'/Applications/DataGrip.app', 'English'},
     {'/Applications/Safari.app', 'English'},
     {'/Applications/Google Chrome.app', 'English'},
