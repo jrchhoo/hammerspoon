@@ -10,19 +10,39 @@ local obj = {}
 function init()
     if interface then
         local interface_detail = hs.network.interfaceDetails(interface)
+        if interface_detail.AirPort then
+            local ssid = interface_detail.AirPort.SSID
+            table.insert(menuData, {
+                title = "SSID: " .. ssid,
+                tooltip = "Copy SSID to clipboard",
+                fn = function() 
+                    hs.pasteboard.setContents(ssid) 
+                end
+            })
+        end
         if interface_detail.IPv4 then
             local ipv4 = interface_detail.IPv4.Addresses[1]
             table.insert(menuData, {
-                title = "IPv4:" .. ipv4,
+                title = "IPv4: " .. ipv4,
                 tooltip = "Copy Ipv4 to clipboard",
                 fn = function()
                     hs.pasteboard.setContents(ipv4)
                 end
             })
         end
+        if interface_detail.IPv6 then
+            local ipv6 = interface_detail.IPv6.Addresses[1]
+            table.insert(menuData, {
+                title = "IPv6: " .. ipv6,
+                tooltip = "Copy IPv6 to clipboard",
+                fn = function() 
+                    hs.pasteboard.setContents(ipv6) 
+                end
+            })
+        end
         local mac = hs.execute('ifconfig ' .. interface .. ' | grep ether | awk \'{print $2}\'')
         table.insert(menuData, {
-            title = 'MAC:' .. mac,
+            title = 'MAC Addr: ' .. mac,
             tooltip = 'Copy MAC to clipboard',
             fn = function()
                 hs.pasteboard.setContents(mac)
@@ -52,7 +72,7 @@ function scan()
         obj.last_down = obj.current_down
         obj.last_up = obj.current_up
 
-        local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 70}
+        local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 60}
         canvas[1] = {type = 'text', text = obj.display_text}
         menubar:setIcon(canvas:imageFromCanvas())
         canvas:delete()
