@@ -17,6 +17,7 @@ local app2Ime = {
     {'/Applications/Lepton.app', 'English'},
     {'/Applications/DataGrip.app', 'English'},
     {'/Applications/Safari.app', 'English'},
+    {'/Applications/Safari Technology Preview.app', 'English'},
     {'/Applications/Google Chrome.app', 'English'},
     {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/QQ.app', 'Chinese'},
