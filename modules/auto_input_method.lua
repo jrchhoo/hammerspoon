@@ -6,29 +6,11 @@ local function English()
 end
 
 -- app to expected ime config
-local app2Ime = {
-    {'/System/Library/CoreServices/Finder.app', 'English'},
-    {'/System/Library/CoreServices/Spotlight.app', 'English'},
-    {'/System/Applications/Utilities/Terminal.app', 'English'},
-    {'/System/Applications/Notes.app', 'Chinese'},
-    {'/System/Applications/System Preferences.app', 'Chinese'},
-    {'/Applications/Visual Studio Code.app', 'English'},
-    {'/Applications/intelliJ IDEA.app', 'English'},
-    {'/Applications/Lepton.app', 'English'},
-    {'/Applications/DataGrip.app', 'English'},
-    {'/Applications/Safari.app', 'English'},
-    {'/Applications/Safari Technology Preview.app', 'English'},
-    {'/Applications/Google Chrome.app', 'English'},
-    {'/Applications/WeChat.app', 'Chinese'},
-    {'/Applications/QQ.app', 'Chinese'},
-    {'/Applications/Skype.app', 'Chinese'},
-    {'/Applications/Telegram.app', 'Chinese'},
 
-}
 
 function updateFocusAppInputMethod()
     local focusAppPath = hs.window.frontmostWindow():application():path()
-    for index, app in pairs(app2Ime) do
+    for index, app in pairs(autoInputMethodApp) do
         local appPath = app[1]
         local expectedIme = app[2]
 
