@@ -9,7 +9,10 @@ applist = {
     {shortcut = 'W',appname = 'WeChat'},
     {shortcut = 'Q',appname = 'QQ'},
     {shortcut = 'P',appname = 'Skype'},
-    {shortcut = 'E',appname = 'Telegram'}
+    {shortcut = 'E',appname = 'Telegram'},
+    {shortcut = 'M',appname = 'Mail'},
+    {shortcut = 'N',appname = 'Notes'},
+    {shortcut = 'C',appname = 'Calendar'},
 }
 
 autoInputMethodApp = {
@@ -28,5 +31,5 @@ autoInputMethodApp = {
     {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/QQ.app', 'Chinese'},
     {'/Applications/Skype.app', 'Chinese'},
-    {'/Applications/Telegram.app', 'Chinese'}
+    {'/Applications/Telegram.app', 'Chinese'},
 }
