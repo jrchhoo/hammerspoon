@@ -150,3 +150,13 @@ hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Up",    hs.fnutils.partial(winresize, "m
 -- Move between screens
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Left",  hs.fnutils.partial(winmovescreen, "left"))
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Right", hs.fnutils.partial(winmovescreen, "right"))
+
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "-", "Narrow Window", function()
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    f.w = f.w - 40
+    f.h = f.h - 40
+    f.x = f.x + 20
+    f.y = f.y + 20
+    win:setFrame(f)
+end)
