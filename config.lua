@@ -32,4 +32,5 @@ autoInputMethodApp = {
     {'/Applications/QQ.app', 'Chinese'},
     {'/Applications/Skype.app', 'Chinese'},
     {'/Applications/Telegram.app', 'Chinese'},
+    {'/Applications/MenubarX.app', 'Chinese'},
 }

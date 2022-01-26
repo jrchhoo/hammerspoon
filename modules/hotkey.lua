@@ -19,3 +19,6 @@ hs.fnutils.each(applist, function(entry)
         hs.application.launchOrFocus(entry.appname)
     end)
 end)
+
+
+

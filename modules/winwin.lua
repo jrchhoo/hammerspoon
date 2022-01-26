@@ -456,3 +456,4 @@ hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Right", "Move To Right Screen", function
         win:moveToScreen(second_monitor)
     end
 end)
+
