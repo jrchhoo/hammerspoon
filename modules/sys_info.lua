@@ -76,7 +76,7 @@ function scan()
     end
 
     obj.cpu_used = getCpu()
-    obj.disk_used = getRootVolumes()
+    -- obj.disk_used = getRootVolumes()
     obj.mem_used = getVmStats()
 
     obj.down_bytes = obj.current_down - obj.last_down
@@ -86,14 +86,14 @@ function scan()
     obj.up_speed = format_speed(obj.up_bytes)
 
     obj.display_text = hs.styledtext.new('▲ ' .. obj.up_speed .. '\n▼ ' .. obj.down_speed, {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
-    obj.display_disk_text = hs.styledtext.new(obj.disk_used ..'\n'.. 'SSD ' , {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
+--    obj.display_disk_text = hs.styledtext.new(obj.disk_used ..'\n'.. 'SSD ' , {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
     obj.display_mem_text = hs.styledtext.new(obj.mem_used ..'\n'.. 'MEM ' , {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
     obj.display_cpu_text = hs.styledtext.new(obj.cpu_used ..'\n'.. 'CPU ' , {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
 
     obj.last_down = obj.current_down
     obj.last_up = obj.current_up
 
-    local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 30+30+30+60}
+    local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 30+30+60}
     -- canvas[1] = {type = 'text', text = obj.display_text}
     canvas:appendElements({
         type = "text",
@@ -101,23 +101,23 @@ function scan()
         -- withShadow = true,
         trackMouseEnterExit = true,
         },{
+        -- type = "text",
+        -- text = obj.display_disk_text,
+        -- withShadow = true,
+        -- trackMouseEnterExit = true,
+        -- frame = { x = 30, y = "0", h = "1", w = "1", }
+        -- },{
         type = "text",
-        text = obj.display_disk_text,
+        text = obj.display_mem_text,
         -- withShadow = true,
         trackMouseEnterExit = true,
         frame = { x = 30, y = "0", h = "1", w = "1", }
         },{
         type = "text",
-        text = obj.display_mem_text,
-        -- withShadow = true,
-        trackMouseEnterExit = true,
-        frame = { x = 60, y = "0", h = "1", w = "1", }
-        },{
-        type = "text",
         text = obj.display_text,
         -- withShadow = true,
         trackMouseEnterExit = true,
-        frame = { x = 90, y = "0", h = "1", w = "1", }
+        frame = { x = 60, y = "0", h = "1", w = "1", }
         })
     menubar:setIcon(canvas:imageFromCanvas())
     canvas:delete()

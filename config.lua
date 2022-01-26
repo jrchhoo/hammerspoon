@@ -11,7 +11,7 @@ applist = {
     {shortcut = 'P',appname = 'Skype'},
     {shortcut = 'E',appname = 'Telegram'},
     {shortcut = 'M',appname = 'Mail'},
-    {shortcut = 'N',appname = 'Notes'},
+    {shortcut = 'N',appname = 'Numbers'},
     {shortcut = 'C',appname = 'Calendar'},
 }
 
@@ -20,6 +20,8 @@ autoInputMethodApp = {
     {'/System/Library/CoreServices/Spotlight.app', 'English'},
     {'/System/Applications/Utilities/Terminal.app', 'English'},
     {'/System/Applications/Notes.app', 'Chinese'},
+    {'/Applications/Notion.app', 'Chinese'},
+    {'/Applications/Numbers.app', 'Chinese'},
     {'/System/Applications/System Preferences.app', 'Chinese'},
     {'/Applications/Visual Studio Code.app', 'English'},
     {'/Applications/intelliJ IDEA.app', 'English'},
