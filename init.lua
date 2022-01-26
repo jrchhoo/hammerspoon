@@ -3,6 +3,6 @@ require "modules.reload"
 require "modules.auto_input_method"
 require "modules.clipboard"
 require "modules.hotkey"
-require "modules.network"
-require "modules.winwin"
+require "modules.sysInfo"
+require "modules.window"
 
